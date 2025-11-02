@@ -73,7 +73,7 @@ method = st.sidebar.selectbox("VaR method", ["historical", "parametric", "evt"])
 evt_q = st.sidebar.slider("EVT threshold quantile", 0.80, 0.99, 0.90, 0.01)
 
 if source == "Sample CSV":
-    df = load_csv("data/AAPL.csv")
+    df = load_csv("./data/AAPL.csv")
 else:
     up = st.sidebar.file_uploader("Upload CSV with columns: date, ret", type=["csv"])
     if up:
